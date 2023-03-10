@@ -3811,7 +3811,7 @@
 			};
 		};
 
-		qcom,kgsl-hyp {
+		pil_gpu: qcom,kgsl-hyp {
 			compatible = "qcom,pil-tz-generic";
 			qcom,pas-id = <0xd>;
 			qcom,firmware-name = "a506_zap";
@@ -3822,12 +3822,12 @@
 			qcom,scm_core_clk_src-freq = <0x4c4b400>;
 		};
 
-		qcom,kgsl-busmon {
+		msm_bus: qcom,kgsl-busmon {
 			label = "kgsl-busmon";
 			compatible = "qcom,kgsl-busmon";
 		};
 
-		qcom,gpubw {
+		gpubw: qcom,gpubw {
 			compatible = "qcom,devbw";
 			governor = "bw_vbif";
 			qcom,src-dst-ports = <0x1a 0x200>;
@@ -3837,7 +3837,7 @@
 			phandle = <0x39>;
 		};
 
-		qcom,kgsl-3d0@1c00000 {
+		msm_gpu: qcom,kgsl-3d0@1c00000 {
 			label = "kgsl-3d0";
 			compatible = "qcom,kgsl-3d0", "qcom,kgsl-3d";
 			status = "ok";
@@ -3967,7 +3967,7 @@
 			};
 		};
 
-		qcom,kgsl-iommu@1c40000 {
+		kgsl_msm_iommu: qcom,kgsl-iommu@1c40000 {
 			compatible = "qcom,kgsl-smmu-v2";
 			reg = <0x1c40000 0x10000>;
 			qcom,protect = <0x40000 0x10000>;
